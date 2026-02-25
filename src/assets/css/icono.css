@@ -1,0 +1,55 @@
+.subtsss {
+  font-family: "Orbitron", sans-serif;
+  font-size: 1.5rem;
+
+  text-align: center;
+  color: #ffbc05;
+  transition:
+    transform 0.3s ease-out,
+    color 0.3s,
+    text-shadow 0.3s;
+}
+.subtss:hover {
+  transform: scale(1.1);
+  color: #000000;
+}
+
+.iconoz {
+  margin-top: 60px;
+  font-size: 90px;
+  display: block;
+  color: #fdbe33;
+  height: 100px;
+  transition:
+    transform 0.3s ease-out,
+    color 0.3s,
+    text-shadow 0.3s;
+}
+.iconoz:hover {
+  transform: scale(1.1);
+}
+.item-numeros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  margin-left: 100px;
+  transition:
+    transform 0.3s ease-out,
+    color 0.3s,
+    text-shadow 0.3s;
+}
+
+.item-numeros:hover {
+  transform: scale(1.1);
+  color: #000000;
+}
+
+@media (max-width: 600px) {
+  .item-numeros {
+    margin: 0 auto;
+  }
+  .subtsss {
+    font-size: 1rem;
+  }
+}

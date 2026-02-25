@@ -1,0 +1,90 @@
+.projects-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -14rem;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(80px, 10vw, 140px) 1.5rem;
+  text-align: center;
+}
+
+.projects-header h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(2.2rem, 6vw, 5rem);
+  font-weight: 900;
+  z-index: 999;
+
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  line-height: 1.1;
+}
+
+.projects-tag {
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  z-index: 999;
+
+  color: #ffbc05;
+  margin-bottom: 1rem;
+}
+.click-tag {
+  margin-top: 2rem;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1rem;
+  z-index: 999;
+
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #ffbc05;
+}
+
+.projects-header p {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  font-weight: 400;
+  color: #d1d1d1;
+  max-width: 1200px;
+  line-height: 1.6;
+  margin-top: 1.5rem;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1024px) {
+  .projects-header {
+    padding: 100px 2rem;
+  }
+
+  .projects-header h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-header {
+    padding: 80px 1.5rem;
+  }
+
+  .projects-header h1 {
+    font-size: 2rem;
+  }
+
+  .projects-header p {
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .projects-header p {
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+  }
+}

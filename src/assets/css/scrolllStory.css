@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500&display=swap");
+
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: #ffefef;
+  z-index: 1000;
+  transform-origin: top center;
+}
+
+.grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  margin-top: -5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.title {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 400;
+  line-height: 1.05;
+  display: flex;
+  flex-direction: column;
+  perspective: 1000px;
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  letter-spacing: -0.02em;
+}
+
+.title span {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.title span::after {
+  content: "";
+}
+
+.line {
+  height: 2px;
+  width: 220px;
+  margin: 2.5rem 0;
+  background: linear-gradient(90deg, transparent, #d4af37, #f6e7b2, #d4af37, transparent);
+}
+
+.subtitletwo {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(1rem, 1.3vw, 1.5rem);
+  max-width: 1100px;
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 62px;
+  height: 62px;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  z-index: 50;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    color 0.4s ease;
+}
+
+.whatsapp-float::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #ffbc05;
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.whatsapp-float:hover::before {
+  transform: translateX(0);
+}
+
+.whatsapp-float:hover {
+  color: #ffffff;
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+  }
+
+  .line {
+    width: 150px;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+  }
+}

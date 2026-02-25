@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com");
+.header-home {
+  height: 100vh;
+  margin-top: -10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-home h1 {
+  font-family: "Orbitron", sans-serif;
+
+  font-size: clamp(2.5rem, 8vw, 7rem);
+  font-weight: 900;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 100px;
+  line-height: 0.9;
+  letter-spacing: -2px;
+}
+
+.header-home p {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  font-weight: 400;
+  color: #c91616;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.header-home p span {
+  color: #00ffaa;
+  font-weight: 700;
+}
+.header-home button {
+  width: 120px;
+  height: 50px;
+  cursor: pointer;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  background: #ffffff;
+  padding: 8px var(--pad-x) 8px calc(var(--pad-x) - 2px);
+  border-radius: 999px;
+  font-size: 16px;
+  color: #000000;
+}

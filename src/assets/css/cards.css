@@ -1,0 +1,73 @@
+.cards {
+  padding: 10rem 6vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 4rem;
+  perspective: 1600px;
+}
+
+.card {
+  position: relative;
+  height: 420px;
+  padding: 3rem;
+  color: #fff;
+  transform-style: preserve-3d;
+  overflow: hidden;
+  will-change: transform;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+  filter: brightness(0.3);
+}
+
+.card-media {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 10%, rgba(0, 0, 0, 0.4) 50%, transparent 100%);
+  z-index: -2;
+}
+
+.card-glow {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 70%);
+  opacity: 0;
+  z-index: -1;
+}
+
+.card h3 {
+  font-family: "Orbitron", sans-serif;
+  color: #ffbc05;
+
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.02em;
+  position: relative;
+  z-index: 2;
+}
+
+.card p {
+  font-family: "Inter", sans-serif;
+  opacity: 0.85;
+  max-width: 90%;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 2;
+}
