@@ -1,21 +1,78 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- Primary SEO -->
+    <title>RZG Portfolio | Desarrollador Web & Frontend</title>
+    <meta name="title" content="RZG Portfolio | Desarrollador Web & Frontend" />
+    <meta
+      name="description"
+      content="Portfolio profesional de RZG. Desarrollo de aplicaciones web modernas con React, Three.js, GSAP y tecnologías frontend avanzadas."
+    />
+    <meta name="keywords" content="desarrollador web, frontend, react, three.js, gsap, portfolio, programador, aplicaciones web modernas" />
+    <meta name="author" content="RZG" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Spanish" />
+    <meta name="revisit-after" content="7 days" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://tudominio.com/" />
+
+    <!-- Mobile Optimization -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../src/assets/img/logorafael.png" />
+
+    <!-- Performance Optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>rzg_portfolio</title>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="RZG Portfolio | Desarrollador Web & Frontend" />
+    <meta
+      property="og:description"
+      content="Explora proyectos web modernos desarrollados con React, Three.js y animaciones avanzadas con GSAP."
+    />
+    <meta property="og:image" content="https://tudominio.com/preview.jpg" />
+    <meta property="og:url" content="https://tudominio.com/" />
+    <meta property="og:site_name" content="RZG Portfolio" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RZG Portfolio | Desarrollador Web" />
+    <meta name="twitter:description" content="Portfolio profesional con proyectos modernos en React y WebGL." />
+    <meta name="twitter:image" content="https://tudominio.com/preview.jpg" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "RZG",
+        "url": "https://tudominio.com/",
+        "jobTitle": "Frontend Developer",
+        "sameAs": ["https://github.com/tuusuario", "https://linkedin.com/in/tuusuario"],
+        "knowsAbout": ["React", "Three.js", "GSAP", "Web Development", "Frontend Engineering"]
+      }
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
+
+    <!-- GSAP CDN -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
 
+    <!-- Main App -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
