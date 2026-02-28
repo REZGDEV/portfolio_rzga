@@ -3,7 +3,7 @@ import AboutMe from "./aparts/about_me";
 import ScrollStory from "../components/hometwo";
 import "../assets/css/home.css";
 import Projects from "./aparts/projects";
-import LightRays from "../sdcn/LightRays";
+import LightRays from "../sdcn/LightRays.tsx";
 import { FaWhatsapp } from "react-icons/fa";
 import Technologies from "../components/tecnologies";
 

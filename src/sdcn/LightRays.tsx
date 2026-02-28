@@ -241,10 +241,8 @@ void main() {
       meshRef.current = mesh;
 
       const updatePlacement = () => {
-        if (!containerRef.current || !renderer) return;
-
-        renderer.dpr = Math.min(window.devicePixelRatio, 2);
-
+        if (!containerRef.current || !rendererRef.current) return;
+        rendererRef.current.dpr = Math.min(window.devicePixelRatio, 2);
         const { clientWidth: wCSS, clientHeight: hCSS } = containerRef.current;
         renderer.setSize(wCSS, hCSS);
 
