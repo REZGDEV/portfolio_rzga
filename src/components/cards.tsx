@@ -6,16 +6,20 @@ import huevoscampesinos from "../assets/img/huevoscampesinos.png";
 
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "../assets/css/cards.css";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Cards() {
-  const cardsRef = useRef([]);
+  // 🔥 TIPADO CORRECTO
+  const cardsRef = useRef<(HTMLAnchorElement | null)[]>([]);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       cardsRef.current.forEach((card) => {
-        const media = card.querySelector(".card-media");
-        const glow = card.querySelector(".card-glow");
+        if (!card) return; // 🔥 Protección null
+
+        const media = card.querySelector<HTMLElement>(".card-media");
+        const glow = card.querySelector<HTMLElement>(".card-glow");
 
         gsap.fromTo(
           card,
@@ -51,17 +55,20 @@ export default function Cards() {
           ease: "power3.out",
         });
 
-        hoverTl.to(
-          media,
-          {
-            scale: 1.18,
-            duration: 0.9,
-            ease: "power3.out",
-          },
-          0,
-        );
+        if (media) {
+          hoverTl.to(
+            media,
+            {
+              scale: 1.18,
+              duration: 0.9,
+              ease: "power3.out",
+            },
+            0,
+          );
+        }
 
         card.addEventListener("mouseenter", () => hoverTl.play());
+
         card.addEventListener("mouseleave", () => {
           hoverTl.reverse();
           gsap.to(card, {
@@ -71,7 +78,7 @@ export default function Cards() {
           });
         });
 
-        card.addEventListener("mousemove", (e) => {
+        card.addEventListener("mousemove", (e: MouseEvent) => {
           const bounds = card.getBoundingClientRect();
           const x = e.clientX - bounds.left;
           const y = e.clientY - bounds.top;
@@ -86,12 +93,14 @@ export default function Cards() {
             ease: "power3.out",
           });
 
-          gsap.to(glow, {
-            x: x - bounds.width / 2,
-            y: y - bounds.height / 2,
-            opacity: 1,
-            duration: 0.3,
-          });
+          if (glow) {
+            gsap.to(glow, {
+              x: x - bounds.width / 2,
+              y: y - bounds.height / 2,
+              opacity: 1,
+              duration: 0.3,
+            });
+          }
         });
       });
     });
@@ -104,24 +113,33 @@ export default function Cards() {
       {[
         {
           title: "Construimos",
-          text: "Software creador de presupuestos para obras con más de 2000 materiales registrados en la base de datos. También conserva diferentes roles como proveedor, administrador y cliente. Además, cuenta con una red social donde podrás encontrar constructores para tu obra soñada.",
+          text: "Software creador de presupuestos...",
           image: construimos,
           link: "https://construimos.lorem.fun/",
         },
         {
           title: "Lorem Fun",
-          text: "Landing page creada para ofrecer la creación de páginas web de alta calidad, con un diseño moderno y una experiencia de usuario atractiva. Cuenta con un e-commerce donde podrás comprar themes para tu proyecto.",
+          text: "Landing page creada para ofrecer...",
           image: loremfun,
           link: "https://www.lorem.fun/",
         },
         {
           title: "Huevos Campesinos",
-          text: "E-commerce donde podrás comprar productos locales de Huevos Campesinos, con un sistema de pago seguro.",
+          text: "E-commerce donde podrás comprar...",
           image: huevoscampesinos,
           link: "https://huevoscampesinos.com/",
         },
       ].map((item, i) => (
-        <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="card" ref={(el) => (cardsRef.current[i] = el)}>
+        <a
+          key={i}
+          href={item.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="card"
+          ref={(el) => {
+            cardsRef.current[i] = el;
+          }}
+        >
           <div className="card-media" />
           <div className="card-glow" />
           <img src={item.image} alt="Imagen de un diseño digital" />
