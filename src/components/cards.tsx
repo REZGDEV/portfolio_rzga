@@ -113,19 +113,19 @@ export default function Cards() {
       {[
         {
           title: "Construimos",
-          text: "Software creador de presupuestos...",
+          text: "Software creador de presupuestos para obras con más de 2000 materiales registrados en la base de datos. También conserva diferentes roles como proveedor, administrador y cliente. Además, cuenta con una red social donde podrás encontrar constructores para tu obra soñada.",
           image: construimos,
           link: "https://construimos.lorem.fun/",
         },
         {
           title: "Lorem Fun",
-          text: "Landing page creada para ofrecer...",
+          text: "Landing page creada para ofrecer la creación de páginas web de alta calidad, con un diseño moderno y una experiencia de usuario atractiva. Cuenta con un e-commerce donde podrás comprar themes para tu proyecto.",
           image: loremfun,
           link: "https://www.lorem.fun/",
         },
         {
           title: "Huevos Campesinos",
-          text: "E-commerce donde podrás comprar...",
+          text: "E-commerce donde podrás comprar productos locales de Huevos Campesinos, con un sistema de pago seguro.",
           image: huevoscampesinos,
           link: "https://huevoscampesinos.com/",
         },

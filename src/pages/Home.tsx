@@ -12,10 +12,10 @@ export default function Home() {
     <>
       <LightRays
         raysOrigin="top-center"
-        raysColor="#fffbf6"
-        raysSpeed={1}
+        raysColor="#f08809"
+        raysSpeed={10}
         lightSpread={1}
-        rayLength={1}
+        rayLength={100}
         followMouse={true}
         mouseInfluence={0.1}
         noiseAmount={0}
@@ -23,7 +23,7 @@ export default function Home() {
         className="custom-rays"
         pulsating={false}
         fadeDistance={10}
-        saturation={-3}
+        saturation={100}
       />
       <ScrollStory />
       <AboutMe />

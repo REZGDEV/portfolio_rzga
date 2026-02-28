@@ -1,10 +1,23 @@
 .contentc {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* Estado inicial: columnas flexibles que se ajustan solas */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
   max-width: 1600px;
   justify-items: center;
   z-index: 999;
+  /* Importante: ajusta el margen para móviles */
   margin-right: 8rem;
+}
+
+/* Cuando la pantalla sea pequeña (ej. tablets o móviles) */
+@media (max-width: 768px) {
+  .contentc {
+    /* Forzamos que se pongan uno debajo del otro */
+    grid-template-columns: 1fr;
+    /* Quitamos el margen derecho excesivo en móviles para centrar */
+    margin-right: 0;
+    padding: 0 1rem;
+  }
 }

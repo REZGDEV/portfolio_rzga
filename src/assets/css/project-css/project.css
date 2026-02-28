@@ -46,6 +46,8 @@
   font-family: "Syne", sans-serif;
   font-size: clamp(0.9rem, 1.2vw, 1.1rem);
   font-weight: 400;
+  z-index: 999;
+
   color: #d1d1d1;
   max-width: 1200px;
   line-height: 1.6;
