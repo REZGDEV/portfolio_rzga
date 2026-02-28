@@ -9,10 +9,12 @@ import { Highlighter } from "../../components/ui/highlighter";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutMe() {
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   useLayoutEffect(() => {
     const el = sectionRef.current;
+    if (!el) return;
+
     const q = gsap.utils.selector(el);
 
     const ctx = gsap.context(() => {
