@@ -6,6 +6,7 @@ import Projects from "./aparts/projects";
 import LightRays from "../sdcn/LightRays.tsx";
 import { FaWhatsapp } from "react-icons/fa";
 import Technologies from "../components/tecnologies";
+import Footer from "../components/footer";
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
       <AboutMe />
       <Projects />
       <a
-        href="https://wa.me/5730433252?text=Hola%20quiero%20información%20sobre%20sus%20servicios"
+        href="https://wa.me/573044332452?text=Hola%20quiero%20información%20sobre%20sus%20servicios"
         className="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"
@@ -38,6 +39,7 @@ export default function Home() {
         <FaWhatsapp />
       </a>
       <Technologies />
+      <Footer />
     </>
   );
 }

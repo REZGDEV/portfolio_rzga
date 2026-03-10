@@ -9,6 +9,7 @@
   z-index: 999;
   /* Importante: ajusta el margen para móviles */
   margin-right: 8rem;
+  margin-bottom: 6rem;
 }
 
 /* Cuando la pantalla sea pequeña (ej. tablets o móviles) */
