@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaGithub } from "react-icons/fa";
 import "../assets/css/footer.css";
 
 export default function Footer() {
